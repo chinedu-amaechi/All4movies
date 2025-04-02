@@ -1,0 +1,222 @@
+.movie-detail {
+  position: relative;
+  margin: -2rem;
+}
+
+.movie-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background-size: cover;
+  background-position: center top;
+  z-index: -1;
+}
+
+.backdrop-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), #111);
+}
+
+.movie-content {
+  padding: 2rem;
+  padding-top: 220px;
+}
+
+.movie-header {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.movie-poster-container {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.movie-poster {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.movie-info {
+  flex: 1;
+}
+
+.movie-info h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.custom-badge {
+  display: inline-block;
+  background-color: #e50914;
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.movie-date, .movie-runtime, .movie-genres {
+  margin: 0.5rem 0;
+  color: #aaa;
+}
+
+.movie-rating {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.rating-value {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.movie-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.favorite-btn, .edit-btn, .delete-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.favorite-btn {
+  background-color: #e50914;
+  color: white;
+}
+
+.favorite-btn.active {
+  background-color: #333;
+}
+
+.edit-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-confirmation {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.delete-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.confirm-delete, .cancel-delete {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.cancel-delete {
+  background-color: #333;
+  color: white;
+}
+
+.movie-overview, .movie-director, .movie-cast {
+  margin: 2rem 0;
+}
+
+.movie-overview h2, .movie-director h2, .movie-cast h2, .movie-videos h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.videos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.video-item {
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.video-item iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.movie-reviews-section {
+  margin-top: 3rem;
+}
+
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.write-review-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .movie-content {
+    padding: 1rem;
+    padding-top: 180px;
+  }
+  
+  .movie-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .movie-poster-container {
+    width: 180px;
+    margin-bottom: 1rem;
+  }
+  
+  .movie-actions {
+    justify-content: center;
+  }
+  
+  .videos-container {
+    grid-template-columns: 1fr;
+  }
+}

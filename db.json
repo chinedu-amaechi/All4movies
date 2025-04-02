@@ -1,0 +1,19 @@
+{
+  "movies": [],
+  "reviews": [],
+  "lists": [
+    {
+      "id": "favorites",
+      "name": "Favorites",
+      "userId": "system",
+      "movies": []
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "demo_user",
+      "email": "demo@example.com"
+    }
+  ]
+}
